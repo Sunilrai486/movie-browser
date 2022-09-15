@@ -1,1 +1,13 @@
-<p>home works!</p>
+<p-panelMenu [transitionOptions]="'0ms'" [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+
+<p-button (click)="gfg()" 
+          label="Click Here">
+</p-button>
+<p-dialog header="GeeksforGeeks"
+          [(visible)]="geeks">
+    <p>A Computer Science portal for geeks.</p>
+</p-dialog>
+
+
+<p-slideMenu #menu [model]="itemsMenu" [popup]="true" effectDuration="1000" easing="ease-in" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-slideMenu>
+<button #btn type="button" pButton icon="pi pi-list" label="Show" (click)="menu.toggle($event)"></button>
